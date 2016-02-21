@@ -15,4 +15,3 @@ function gestureStart() {
     }
   }
 }
-alert("haha");
