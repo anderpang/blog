@@ -123,6 +123,10 @@ img{max-width:100%;}
 }
 
 /* article */
-.article{margin:0 1em;@include transition(opacity 1s);}
-.art_banner{display:block;margin:1em auto;}
+.article{margin:0 1em;padding-bottom:3em;@include transition(opacity 1s);}
+.article>h3{text-align:center;font-size:1.2em;font-weight:500;margin-bottom:.5em;}
+.article>.intro{margin-bottom:1em;color:#999;text-align:center;}
+.article>img{display:block;margin:1em auto;}
 .article>p{text-indent:2em;}
+.article .red{color:red;}
+.article>.code-common{margin: 1em 0;padding: 15px 100px 15px 15px;border: 1px dashed #ccc;background: #f7f7f7;white-space:pre-wrap;}

@@ -6,7 +6,11 @@ ander.createAsideList(
      {
       url:"#!article_1456389001586",
       text:"个人历程"
-     }
+     },
+    {
+       url:"#!article_1456409480771",
+       text:"利用GitHub搭建博客"
+    }
     ]
 },
 {
@@ -15,6 +19,10 @@ ander.createAsideList(
      {
       url:"#!article_1456389001586",
       text:"个人历程"
+     },
+     {
+       url:"#!article_1456409480771",
+       text:"利用GitHub搭建博客"
      }
     ]
 },
@@ -24,6 +32,10 @@ ander.createAsideList(
        {
         url:"#!article_1456389001586",
         text:"个人历程"
-       }
+       },
+        {
+           url:"#!article_1456409480771",
+           text:"利用GitHub搭建博客"
+        }
     ]
 });
