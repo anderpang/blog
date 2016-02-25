@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<root>
+  <div class="r_cat">
+	  <h3>精心推荐</h3>
+	  <ol class="r_list">
+		<li><a href="#!article_1456389001586">个人历程</a></li>
+	  </ol>
+
+	  <h3>最新文章</h3>
+	  <ol class="r_list">
+		<li><a href="#!article_1456389001586">个人历程</a></li>
+	  </ol>
+
+	  <h3>文章分类</h3>
+	  <ol class="r_list">
+		<li><a href="#!article_1456389001586">个人历程</a></li>
+	  </ol>
+  </div>
+</root>
