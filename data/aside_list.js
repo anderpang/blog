@@ -4,25 +4,25 @@ ander.createAsideList(
   "title":"精心推荐",
   "list":[
      {
-      url:"#!article_1456389001586",
-      text:"个人历程"
+      url:"#!article_1456409480771",
+      text:"利用GitHub搭建博客"      
      },
     {
-       url:"#!article_1456409480771",
-       text:"利用GitHub搭建博客"
-    }
+       url:"#!article_1456389001586",
+      text:"个人历程"
+     }
     ]
 },
 {
   "title":"最新文章",
   "list":[
      {
-      url:"#!article_1456389001586",
-      text:"个人历程"
+      url:"#!article_1456409480771",
+      text:"利用GitHub搭建博客"      
      },
-     {
-       url:"#!article_1456409480771",
-       text:"利用GitHub搭建博客"
+    {
+       url:"#!article_1456389001586",
+      text:"个人历程"
      }
     ]
 },
@@ -30,12 +30,12 @@ ander.createAsideList(
   "title":"文章分类",
   "list":[
        {
-        url:"#!article_1456389001586",
-        text:"个人历程"
-       },
-        {
-           url:"#!article_1456409480771",
-           text:"利用GitHub搭建博客"
-        }
+      url:"#!article_1456409480771",
+      text:"利用GitHub搭建博客"      
+     },
+    {
+       url:"#!article_1456389001586",
+      text:"个人历程"
+     }
     ]
 });
