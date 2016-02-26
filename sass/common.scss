@@ -122,6 +122,9 @@ img{max-width:100%;}
   100%{transform:rotate(360deg)}
 }
 
+#toTop{position:fixed;z-index:100;bottom:-5em;right:1em;width:2.6em;height:2.6em;line-height:2.6em;color:#FFF;text-align:center;border-radius:50%;background:rgba(0,0,0,.8);cursor:pointer;@include transition(bottom .8s);}
+#toTop.show{bottom:3em;}
+
 /* article */
 .article{margin:0 1em;padding-bottom:3em;@include transition(opacity 1s);}
 .article>h3{text-align:center;font-size:1.2em;font-weight:500;margin-bottom:.5em;}
