@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="Keywords" content="博客,个人博客,hugeannex,ander" />
+  <meta name="Description" content="前端,web技术,html,javascript,css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="email=no" name="format-detection" />
+  <title>Ander的个人博客 - 创建文章</title>  
+  <link rel="stylesheet" href="css/admin.css"/>
+  <script src="js/admin.js"></script>
+ </head>
+ <body>
+   <div class="wrapper">
+     <fieldset>
+	   <legend>基本配置</legend>
+	   <form method="POST" action="">
+	      <p>duoshuoQuery = {short_name:"<input type="text" name="short_name" />"}</p>
+	   </form>
+	 </fieldset>
+	 <fieldset>
+	   <legend>编辑文章</legend>
+	   <form method="POST" action="">
+	      <!--p>分类：<select name="cat"></select></p-->
+	      <p>标题：<br /><input type="text" name="title" /></p>
+		  <p>
+		    列表缩略图（188px*140px)：<br />
+            <input type="text" name="thumb" />
+		  <p>
+		    简介：（<span id="counter">140</span>字以内最佳）<br />
+			<textarea name="intro"></textarea>
+		  </p>
+		  <p>
+		    内容：<br />
+			<textarea name="content"></textarea>
+		  </p>
+		  <p class="btn-wrap">
+		    <input type="submit" value="提 交" />
+		  </p>
+	   </form>
+	 </fieldset>
+   </div>
+ </body>
+</html>

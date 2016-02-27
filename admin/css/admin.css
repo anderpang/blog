@@ -1,0 +1,9 @@
+body{font:normal 14px/1.8 "Microsoft YaHei",Verdana,Tahoma;}
+.wrapper{max-width:1000px;margin:2em auto;}
+select,input,textarea{font-size:14px;line-height:1.8;}
+input[type="text"]{width:80%;}
+input[name="short_name"]{width:10em;}
+textarea[name="intro"]{width:90%;height:4em;}
+textarea[name="content"]{width:90%;height:40em;}
+input[type="submit"]{width:6em;height:2em;line-height:2em;}
+.btn-wrap{width:90%;padding-bottom:5em;text-align:right;}

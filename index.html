@@ -11,7 +11,7 @@
   <meta content="email=no" name="format-detection" />
   <title>Ander的个人博客</title>  
   <link rel="stylesheet" href="css/common.css"/>
-  <script src="js/ander.js"></script>
+  <script src="js/+ander.js"></script>
   <!--[if lte IE 9]>
   <script src="js/ie.js"></script>
   <![endif]-->  
@@ -46,7 +46,23 @@
 
      <footer class="footer">
 	   Powered by Ander &copy;2015-2018
-	 </footer>
+	 </footer>	
    </div>
+    <script type="text/template" id="list_tmpl">
+	   <li class="article-item">
+		 <a class="item-title" href="#!<%=data.cat%>_<%=data.date%>">利用GitHub搭建博客</a>
+		 <div class="item-wrap">
+		   <i class="bgimg" style="background-image:url('<%=data.thumb%>');"></i>
+		   <p class="item-content">
+			 <%=data.intro%>
+		   </p>
+		   <div class="item-bar">
+			 <span class="list-date">时间：<%=Date.format(data.date)%></span>
+			 <!--span class="list-cat">分类：<a href=""></a></span-->
+			 <a class="list-read" href="#!<%=data.cat%>_<%=data.date%>">阅读全文</a>
+		   </div>
+		 </div>
+	   </li> 
+	 </script>
  </body>
 </html>
