@@ -1,0 +1,83 @@
+<h2 class="main-title">个人日记</h2>
+		<article class="article">
+		   <h3>Javascript(ES6)之模板字符串</h3>
+		   <div class="intro">时间：2016-2-28</div>
+           <p style="color:#999">
+		     今天看nodejs时，看到了一个字符串，两端以`表示，觉得很不错，就查了一下，发现这是ES6中的模板字符串(template string)。然后用常用的几款浏览器进行了测试(Chrome 47.0.2526.106,Firefox 43.0.1，IE11,Safari 5.1.7），发现只有Chrome和Firefox支持。。。（早就料到IE是这种情况了！）
+		   </p>
+           <p>接下来简单说一下它的应用，和自己的一点想法。</p>
+		   <p>基本用法：</p>
+		   <pre class="code-common code-js">
+ var data="横刀";
+ var result=`我自${data}向天笑！`;
+ console.log(result);
+
+ //结果将是：我自横刀向天笑！
+		   </pre>
+            感觉不错吧。
+
+			<p>它也是可以换行来定义的：</p>
+			<pre class="code-common code-js">
+ var data="横刀";
+ var haha="昆仑"
+ var result=`
+	我自${data}向天笑，
+	去留肝胆两${haha}！
+
+ `;
+ console.log(result);
+
+ //结果：
+ 我自横刀向天笑，
+ 去留肝胆两昆仑！
+
+		   </pre>
+		   哈哈，爽了吧。<br />
+		   这时，我想起时下流行的javascript模板引擎，那是不是可以改进一下了？有想法就动手实验呗。<br />
+           第一步，写测试的html代码：
+		   <pre class="code-common code-html">
+ &lt;ul&gt; &lt;/ul&gt;
+ &lt;input type="button" value="添加" /&gt;
+ &lt;script type="text/template" id="tmpl"&gt;
+   &lt;li&gt;1456633676715&lt;/li&gt;
+ &lt;/script&gt;
+		   </pre>
+		   简单测试，这里的数据就用当前时间戳。呵呵<br />
+		   第二步，写上一段javascript代码：
+		   <pre class="code-common code-js">
+var button=document.querySelector("input");
+button.addEventListener("click",function(){
+  var ul=document.querySelector("ul");      //获取ul父元素
+  var  tmpl=document.querySelector("#tmpl"); //获取模板内容				  
+  var fun=new Function("return `"+tmpl.innerHTML+"`"); //生成模板函数
+   ul.insertAdjacentHTML("beforeEnd",fun());     //插入生成的数据
+});
+		   </pre>
+		   点击按钮试试！
+		   <img style="margin-left:0;" src="images/article/1456634049638.jpg" alt="" />
+		   点了三次，生成了三个时间戳！<br />
+		   理论上到此已经结束了，可还有可恶的IE啊，那该怎么处理？<br />
+		   做个判断呗，在支持模板字符串的浏览器上实现原生的，不支持的浏览器上就自个解析字符串。<br />
+		   看了下，还好有个String.raw函数，这函数就不多说了，我在这只用来做判断。String.raw的详情可见
+		   <a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw" target="_blank">developer.mozillaorg</a>
+		   <pre class="code-common code-js">
+var button=document.querySelector("input");  
+button.addEventListener("click",function(){
+  var ul=document.querySelector("ul");      //获取ul父元素
+  var  tmpl=document.querySelector("#tmpl"); //获取模板内容				  
+  var fun;
+  //判断是否支持模板字符串
+  if(typeof String.raw==="function")
+  {
+	 fun=new Function("return `"+tmpl.innerHTML+"`"); //生成模板函数
+  }
+   else
+   {
+	  ... //自行解析tmpl
+   }
+   ul.insertAdjacentHTML("beforeEnd",fun());     //插入生成的数据
+});
+		   </pre>
+		   最后，如果后台也是用MVC框架的同学要注意了，如果框架中也是用${}来绑定的话，那可能就悲剧了，比如velocity框架。俺所在单位的后台正好用了velocity，555...。个人有一个退一步的想法，把模板写在js文件中（只供参考）。。。
+
+        </article>
