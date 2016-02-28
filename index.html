@@ -50,16 +50,16 @@
    </div>
     <script type="text/template" id="list_tmpl">
 	   <li class="article-item">
-		 <a class="item-title" href="#!<%=data.cat%>_<%=data.date%>">利用GitHub搭建博客</a>
+		 <a class="item-title" href="#!${data.cat}_${data.date}">${data.title}</a>
 		 <div class="item-wrap">
-		   <i class="bgimg" style="background-image:url('<%=data.thumb%>');"></i>
+		   <i class="bgimg" style="background-image:url('${data.thumb}');"></i>
 		   <p class="item-content">
-			 <%=data.intro%>
+			 ${data.intro}
 		   </p>
 		   <div class="item-bar">
-			 <span class="list-date">时间：<%=Date.format(data.date)%></span>
+			 <span class="list-date">时间：${Date.format(data.date)}</span>
 			 <!--span class="list-cat">分类：<a href=""></a></span-->
-			 <a class="list-read" href="#!<%=data.cat%>_<%=data.date%>">阅读全文</a>
+			 <a class="list-read" href="#!${data.cat}_${data.date}">阅读全文</a>
 		   </div>
 		 </div>
 	   </li> 

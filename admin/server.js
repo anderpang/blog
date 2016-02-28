@@ -24,6 +24,7 @@ function createArticle(data){
     list.unshift({
       cat:"article", //分类
       date:id,
+      title:data.title,
       thumb:data.thumb,
       intro:data.intro
     });
