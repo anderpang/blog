@@ -148,8 +148,8 @@ img{max-width:100%;}
 
 @media screen and (max-width:930px){
   .header{width:94%;margin:0 3%;}
-  .main{width:94%;margin:0 3%;float:auto;}
-  .aside{visibility:hidden;position:fixed;z-index:100;width:100%;float:auto;min-width:320px;height:100%;left:0;top:0;overflow-x:hidden;background:rgba(0,0,0,0);
+  .main{width:94%;margin:0 3%;float:none;}
+  .aside{visibility:hidden;position:fixed;z-index:100;width:100%;float:none;min-width:320px;height:100%;left:0;top:0;overflow-x:hidden;background:rgba(0,0,0,0);
     @include transition(all .7s);
   }
   .r_about{display:none;}
@@ -167,4 +167,9 @@ img{max-width:100%;}
   .menu-btn:hover{border-color:#CCC;background:#FFF;}
   .menu-btn:before{position:absolute;content:"";left:0;top:0;right:0;bottom:0;margin:auto;height:1px;width:60%;background:#CCC;}
   .menu-btn:after{position:absolute;content:"";left:0;top:0;right:0;bottom:0;margin:auto;height:40%;width:60%;border-top:1px solid #CCC;border-bottom:1px solid #CCC;}
+}
+@media screen and (max-width:640px){
+ .item-wrap>.bgimg{float:none;width:auto;padding-top:74%;margin-bottom:.8em;}
+ .item-content,
+ .item-bar{width:100%;float:none;}
 }
